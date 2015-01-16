@@ -1,14 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @brewery.name %>
+</h1>
+
+<p>
+  <em> Established in 
+  <%= @brewery.year %>
+  </em>
 </p>
 
 <p>
-  <strong>Year:</strong>
-  <%= @brewery.year %>
+  Number of beers: 
+  <%= @brewery.beers.count %>
 </p>
+
+<ul>
+  <% @brewery.beers.each do |beer| %>
+    <li>
+      <%= link_to beer.name, beer %>
+    </li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_brewery_path(@brewery) %> |
 <%= link_to 'Back', breweries_path %>
+
+<br>
+<br>
+
+<%= link_to 'List of Beers', beers_path %>
