@@ -1,1 +1,1 @@
-Heroku-instanssin osoite: https://peaceful-sands-4355.herokuapp.com/ratings
+Heroku-instanssin osoite: https://peaceful-sands-4355.herokuapp.com
